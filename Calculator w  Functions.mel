@@ -1,0 +1,184 @@
+ global proc Calculator(float $numbers[], string $operation)
+{
+    $result = 0;
+    if ($operation == "Add")
+    {
+        $result = Addition($numbers);
+    }
+    else if ($operation == "Sub")
+    {
+        $result = subtraction($numbers);
+    }
+    else if ($operation == "Multi")
+    {
+        $result = Multiplication($numbers);
+    }
+    else if ($operation == "Div")
+    {
+        $result = Division($numbers);
+    }
+    else if ($operation == "Ave")
+    {
+        $result = Averages($numbers);
+    }
+    else if ($operation == "Med")
+    {
+        $result = Median($numbers);
+    }
+    else if ($operation == "Mod")
+    {
+        $result = Mode($numbers);
+    }
+    else if ($operation == "Power")
+    {
+        $result = PowerNums($numbers);
+    }
+}
+
+global proc float Addition (float $num1, float $num2){
+float $sum;
+$sum = $num1 + $num2;
+return $sum;
+  print("\n"+ $numbers +"Subtracted" + $sum);
+
+}
+
+
+
+
+
+global proc float subtraction (float $num1, float $num2){
+float $sum;
+$sum = $num1 - $num2;
+print("\n"+ $numbers +"Subtracted" + $sum);
+return $sum;
+
+
+}
+
+
+
+
+global proc float Multiplication (float $num1, float $num2){
+float $sum;
+$sum = $num1 * $num2;
+print("\n"+ $numbers +"Multiplied" + $sum);
+return $sum;
+
+}
+
+
+
+
+global proc float Division (float $num1, float $num2){
+float $sum;
+$sum = $num1 / $num2;
+ print("\n"+ $numbers +"Divided" + $sum);
+return $sum;
+
+}
+
+
+Division(25, 5);
+
+
+
+global proc int PowerNums(int $base, int $exponent)
+{
+    float $sum = $base;
+    for ($i = 2; $i <= $exponent; $i++)
+    {
+        $sum = $sum * $base;
+    }
+    print("\n " + $base + " to the " + $exponent + " is " + $sum);
+    return $sum;
+}
+
+global proc float Averages( float $values[])
+{
+    float $average;
+    float $sums;
+    string $numbers;
+    for ($i=0; $i< (size($values)); $i++){
+        $sums = $sums + $values[$i];
+    }
+    $average = $sums / (size($values));
+    
+     for ($i=0; $i< size($values); $i++)
+    {
+        $numbers += $values[$i];
+        $numbers += ",";
+    }
+    
+    print("\n"+ $numbers +"Average is " + $average);
+    return $average;
+} 
+
+
+
+ global proc float Median( float $values[])
+{
+    int $length = size($num);
+    float $numa, $numb, $numc;
+    $num = `sort $num`;
+    
+    if ($length % 2 == 0)
+    {
+        $numa = ($numb + $numc)/ 2;
+        $numb = $num[$length / 2];
+        $numc = $num[$length / 2 - 1];
+  
+    }
+    else {
+        $numa = $num[$length / 2];
+    }
+    print("\nThe Median of " + $values + " is " + $numa);
+    
+    return $numa;
+}
+
+
+
+global proc float Mode(float $num[])
+{
+ float $clones[];
+  int $amount =size($num);
+  
+  
+
+for ($i=0; $i<$amount; $i++)
+{
+    $clones[$i] = 0;
+}
+
+for ($i = 0; $i < $amount; ++$i)
+{
+        int $a = 0;
+        while (($a < $i) && ($num[$i] != $num[$a])){
+            if ($num[$i] != $num[$a]){
+                ++$a;
+            }
+         }
+        float $temp = $clones[$a];
+        $temp++;
+        $clones[$a] = $temp;
+    }
+
+    int $MaxRepeat = 0;
+
+    for ($i = 1; $i < $amount; ++$i) 
+    {
+        if ($clones[$i] > $clones[$MaxRepeat]) 
+        {
+            $MaxRepeat = $i;
+        }
+    }
+
+    return $num[$MaxRepeat];
+}  
+print ("The mode of the numbers is" = $result);
+float $params[] = {1.2, 3.4, 4.5,3.4};
+ float $result = Mode($params);
+   
+
+    
