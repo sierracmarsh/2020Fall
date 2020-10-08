@@ -1,0 +1,32 @@
+
+proc ColorRandom()
+{
+int $ChangeColor = 5;
+string $SelectedObjs[] = `ls -sl`;
+//rand $ChangeColor 32;
+
+
+
+for( $cntl in $SelectedObjs )
+{
+    print $cntl;
+     
+    
+    //setAttr "object.overrideEnabled" 1;
+    
+
+    string $ShapeNode[] = `listRelatives -shapes $SelectedObjs`;
+    for ($Shape in $ShapeNode)
+    {
+        print $Shape;
+        setAttr ( $cntl + "Shape.overrideEnabled") 1;
+        setAttr ($Shape + ".overrideColor")($ChangeColor);
+    }
+
+}
+
+  
+  
+  
+}
+ColorRandom;
