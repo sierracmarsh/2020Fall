@@ -1,0 +1,26 @@
+
+proc RandomPlacements(int $numofDupli,float $maxX,float $maxY,float $maxZ,float $minX,float $minY,float $minZ)
+{
+    string $SelectedObjs[] = {};
+     $SelectedObjs = `ls - sl`; 
+     for  ($j = 0; $j < size($SelectedObjs); $j++)
+         {
+       int $index = $j;
+         for($i = 0; $i < $numofDupli; $i++){
+             string $Obj[] = {};
+            $Obj = `duplicate -rr $SelectedObjs[$index]`;
+             float $RandX = `rand $minX $maxX`;
+             float $RandY = `rand $minY $maxY`;
+             float $Randz = `rand $minZ $maxZ`;
+             
+             select $Obj;
+             
+             xform -ws -translation $RandX $RandY $Randz;
+}
+
+  
+}
+  
+}
+
+RandomPlacements (20,1,7,0,5,1,6);
