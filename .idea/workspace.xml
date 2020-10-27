@@ -18,11 +18,24 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
   <component name="ProjectId" id="1jD3eQoHkRcmZTaGCG7RxxjZJg3" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Documents/maya/scripts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="ca.rightsomegoodgames.mayacharm.settings.MayaSdkConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\dallon\Documents\maya\scripts" />
+      <recent name="C:\Users\dallon\Desktop\Kraken\Fall202CoronaLand\2020Fall\2020Fall" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -48,7 +61,7 @@
       <updated>1603324929747</updated>
       <workItem from="1603324933449" duration="844000" />
       <workItem from="1603325804643" duration="1596000" />
-      <workItem from="1603327802393" duration="1333000" />
+      <workItem from="1603327802393" duration="7197000" />
     </task>
     <servers />
   </component>
