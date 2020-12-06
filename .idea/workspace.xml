@@ -29,7 +29,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="ca.rightsomegoodgames.mayacharm.settings.MayaSdkConfigurable" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -93,7 +93,10 @@
       <workItem from="1603327802393" duration="7784000" />
       <workItem from="1604531673038" duration="7010000" />
       <workItem from="1605238308350" duration="5779000" />
-      <workItem from="1605625472757" duration="1255000" />
+      <workItem from="1605625472757" duration="1845000" />
+      <workItem from="1606942294755" duration="5397000" />
+      <workItem from="1607210152467" duration="664000" />
+      <workItem from="1607225258608" duration="5326000" />
     </task>
     <servers />
   </component>
