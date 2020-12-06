@@ -14,6 +14,7 @@ class RandomTool():
         self.WindowUI = cmds.window(self.WindowUI, title='RandomTool', widthHeight=(150, 300))
         self.column = cmds.columnLayout(parent=self.WindowUI, adjustableColumn=True)
         cmds.button(parent=self.column, label='Apply', command=lambda *x: self.RandomPlacement())
+        cmds.separator(parent=self.col_layout, height=30)
         cmds.showWindow(self.WindowUI)
         cmds.text(label="Number of Duplicates", parent=self.column)
         self.numDups = cmds.intField(parent=self.column)
