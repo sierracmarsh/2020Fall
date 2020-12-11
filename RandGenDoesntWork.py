@@ -1,23 +1,20 @@
-def printTxtField(fieldID):
-    print cmds.textField(fieldID, query=True, text=True)
+import maya.cmds as cmds
+import random
+
+def RandomObj(Clones, minX, maxX, minY, maxY, minZ, maxZ):
+    sel = cmds.ls(selection=True)
+
+    for obj in range(len(cmds.ls(selection=True))):
+        index = obj
+
+        for obj in range(Clones):
+            tempObj = (cmds.duplicate(sel[index], rr=True))
+            randomX = random.uniform(minX, maxX)
+            randomY = random.uniform(minY, maxY)
+            randomZ = random.uniform(minZ, maxZ)
+
+            cmds.select(tempObj)
+            cmds.xform(worldSpace=True, translation=[randomX, randomY, randomZ])
 
 
-# Define an id string for the window first
-winID = 'kevsUI'
-
-# Test to make sure that the UI isn't already active
-if cmds.window(winID, exists=True):
-    cmds.deleteUI(winID)
-
-# Now create a fresh UI window
-cmds.window(winID)
-
-# Add a Layout - a columnLayout stacks controls vertically
-cmds.columnLayout()
-
-# Add controls into this Layout
-whatUSay = cmds.textField()
-cmds.button(label='click me', command='printTxtField(whatUSay)')
-
-# Display the window
-cmds.showWindow()
+RandomGenerator(10,0,10,0,10,0,10)

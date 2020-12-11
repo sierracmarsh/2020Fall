@@ -1,9 +1,4 @@
 import maya.cmds as cmds
-#requires an argument string in the format "Name_##_NodeType"
-# look for the "#" characters and replace them with the next number in a sequence.
-#objs wouldnt stay as ## so I used xx
-#
-
 
 def RenameObj(name_string):
 
@@ -23,4 +18,3 @@ def RenameObj(name_string):
 
             RenameObj("Leg_xx_Obj")
 
-#redo for tuple
