@@ -30,6 +30,3 @@ https://github.com/sierracmarsh/2020Fall/blob/master/RoliPOliOli.mel
 #I didnt add a close button because the windows come with it and I think its stupid.
 
 #I am very tired.
-
-
-
